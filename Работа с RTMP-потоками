@@ -1,0 +1,6 @@
+import librtmp
+
+conn = librtmp.RTMP("rtmp://your.server.net/app/stream", live=True)
+conn.connect()
+stream = conn.create_stream()
+stream.write(your_video_data)
