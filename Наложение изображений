@@ -1,0 +1,8 @@
+from PIL import Image
+
+background = Image.open("background.png")
+overlay = Image.open("overlay.png")
+
+# Наложение overlay на background с учетом альфа-канала
+background.paste(overlay, (0, 0), overlay)
+background.save("result.png")
