@@ -1,0 +1,1 @@
+ffmpeg -f dshow -i video="Your Webcam Name" -f flv rtmp://live.twitch.tv/app/<your_stream_key>
