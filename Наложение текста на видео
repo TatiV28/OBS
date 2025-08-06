@@ -1,0 +1,6 @@
+from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip
+
+video = VideoFileClip("input.mp4")
+txt_clip = TextClip("Текст", fontsize=40, color='white').set_position('center').set_duration(video.duration)
+final = CompositeVideoClip([video, txt_clip])
+final.write_videofile("output.mp4", codec="libx264", audio_codec="aac")
