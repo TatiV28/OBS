@@ -1,0 +1,8 @@
+from pydub import AudioSegment
+
+audio1 = AudioSegment.from_file("audio1.wav")
+audio2 = AudioSegment.from_file("audio2.wav")
+
+# Микширование двух аудиофайлов
+mixed = audio1.overlay(audio2)
+mixed.export("mixed_output.wav", format="wav")
